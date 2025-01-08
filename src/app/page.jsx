@@ -1,12 +1,7 @@
-
-import HomePage from '@/pages/HomePage'
+import HomePage from "@/pages/HomePage";
 
 function Home() {
-  return (
-    <div className='bg-[#1f2124]'>
-      <HomePage></HomePage>
-    </div>
-  )
+  return <HomePage />;
 }
 
-export default Home
+export default Home;

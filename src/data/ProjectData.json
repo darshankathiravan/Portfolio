@@ -1,0 +1,57 @@
+[
+  {
+    "id": 0,
+    "title": "Poornatha's Unified Portal",
+    "year": 2024,
+    "imgPath": "assets/projects/poornatha.PNG",
+    "description": "This project involves the development of an Admin Portal aimed at streamlining administrative tasks for Poornatha. The portal is designed to enhance efficiency by providing a user-friendly interface to manage various entities such as sessions, facilitators, colleges, and course types.",
+    "techstack": [
+      {
+        "id": 0,
+        "techstack_title": "Next.js"
+      },
+      {
+        "id": 1,
+        "techstack_title": "Tailwind"
+      },
+      {
+        "id": 2,
+        "techstack_title": "HTML & CSS"
+      },
+      {
+        "id": 3,
+        "techstack_title": "MUI"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "title": "Activities Portal",
+    "year": 2024,
+    "imgPath": "assets/projects/activities.PNG",
+    "description": "This project is an Interactive Activities Portal designed to create an engaging learning environment for kids through drag-and-drop games. The portal also features a Presenter Page where educators or presenters can design and customize activities based on specific learning objectives, making it highly adaptable to different age groups and subjects.",
+    "screenshots": [{ "id": 0, "imgPath": "" }, {}],
+    "techstack": [
+      {
+        "id": 0,
+        "techstack_title": "Next.js"
+      },
+      {
+        "id": 1,
+        "techstack_title": "Tailwind"
+      },
+      {
+        "id": 2,
+        "techstack_title": "HTML & CSS"
+      },
+      {
+        "id": 3,
+        "techstack_title": "MUI"
+      },
+      {
+        "id": 4,
+        "techstack_title": "dnd kit"
+      }
+    ]
+  }
+]

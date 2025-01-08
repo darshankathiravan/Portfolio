@@ -1,7 +1,10 @@
 "use client";
-import React from "react";
+import { Dialog, DialogTitle } from "@mui/material";
+import React, { useEffect, useState } from "react";
+import ProjectPopup from "./ProjectPopup";
 
-function ProjectCard() {
+function ProjectCard(props) {
+  const { title, imgPath, year, techstack, description } = props.data;
   const containerStyle = {
     overflow: "hidden",
   };
@@ -14,35 +17,41 @@ function ProjectCard() {
   const hoverStyle = {
     transform: "scale(1.1)",
   };
-  return (
-    <div className="max-w-xl rounded overflow-hidden shadow-lg border-[1px] border-[#545353] p-4">
-      <div style={containerStyle}>
-        <img
-          style={imageStyle}
-          src="/assets/sample.png"
-          alt="Sunset in the mountains"
-          className=" " 
-          onMouseEnter={(e) =>
-            (e.target.style.transform = hoverStyle.transform)
-          }
-          onMouseLeave={(e) => (e.target.style.transform = "scale(1)")}
-        />
-      </div>
-      <div className="py-4 text-left items-start">
-        <p>2024</p>
-        <span className="text-3xl mb-2">The Coldest Sunset</span>
-        <p className="rounded-xl border border-[#626263] bg-black w-fit p-1 text-sm">
-          Next.js
-        </p>
 
-        <p>
-          A Next JS website for a fictional fine dining restaurant. A
-          sophisticated design showcases the restaurant's menu, team, and
-          atmosphere, with a form to collect table bookings
-        </p>
+  return (
+    <>
+      <div className="max-w-xl rounded overflow-hidden shadow-lg border-4 border-borderLight dark:border-borderDark p-4 bg-SecondaryBgLight dark:bg-SecondaryBgDark">
+        <div style={containerStyle}>
+          <img
+            style={imageStyle}
+            src={imgPath}
+            alt="Sunset in the mountains"
+            onMouseEnter={(e) =>
+              (e.target.style.transform = hoverStyle.transform)
+            }
+            onMouseLeave={(e) => (e.target.style.transform = "scale(1)")}
+          />
+        </div>
+        <div className="py-4 text-left items-start">
+          <p>{year}</p>
+          <span className="text-3xl mb-2">{title}</span>
+          <div className="flex">
+            {techstack.map((item, index) => (
+              <p
+                key={index}
+                className="rounded-xl border border-borderLight dark:border-borderDark bg-PrimaryBgLight dark:bg-PrimaryBgDark w-fit p-1 text-sm me-2"
+              >
+                {item.techstack_title}
+              </p>
+            ))}
+          </div>
+          <p className="mt-2">{description}</p>
+        </div>
       </div>
-    </div>
+
+      {/* <ProjectPopup data={props.data}/> */}
+    </>
   );
 }
 
-export default ProjectCard;
+export default React.memo(ProjectCard);
