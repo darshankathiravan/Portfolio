@@ -6,6 +6,7 @@ export default {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/sections/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   darkMode: "class", // Enable dark mode using the 'class' strategy
   theme: {
@@ -49,19 +50,54 @@ export default {
         accentLight: "#2563eb", // Blue for light mode
         accentDark: "#60a5fa", // Lighter blue for dark mode
 
-        // Muted colors
-        mutedLight: "#f5f5f5",
-        mutedDark: "#2e2e2e",
+        // card colors
+        cardbglight: "#111827",
+        cardborderlight: "#74f793"
       },
     },
   },
   plugins: [
-    plugin(function ({ addBase }: { addBase: (styles: Record<string, any>) => void }) {
+    plugin(function ({
+      addBase,
+    }: {
+      addBase: (styles: Record<string, any>) => void;
+    }) {
       addBase({
         "*": {
           transitionProperty: "color, background-color, border-color",
-          transitionDuration: "",
+          transitionDuration: "70ms",
           transitionTimingFunction: "ease-in-out",
+        },
+
+        h1: {
+          fontSize: "3rem", // Example heading size
+          fontWeight: "bold",
+          lineHeight: "2.5rem",
+        },
+        h2: {
+          fontSize: "2rem", // Example heading size
+          fontWeight: "bold",
+          lineHeight: "2.5rem",
+        },
+        h3: {
+          fontSize: "1.5rem", // Example heading size
+          fontWeight: "semibold",
+          lineHeight: "2.5rem",
+        },
+        "@screen md": {
+          h1: {
+            fontSize: "4.5rem",
+            lineHeight: "2.5rem",
+          },
+          h2: {
+            fontSize: "3rem",
+            lineHeight: "2.5rem",
+          },
+          h3: {
+            fontSize: "2rem", // Example heading size
+            fontWeight: "semibold",
+            lineHeight: "2.5rem",
+          },
         },
       });
     }),

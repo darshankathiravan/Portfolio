@@ -1,9 +1,7 @@
 "use client";
 import { useState, useCallback } from "react";
-import { MdEmail } from "react-icons/md";
-import { FaGithub } from "react-icons/fa6";
-import { FaLinkedin } from "react-icons/fa";
-import ContactForm from "../components/ContactForm";
+import ContactForm2 from "@/components/ContactForm2";
+import { FaLinkedin, FaGithub, FaInstagram, FaFacebook } from "react-icons/fa";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -39,47 +37,72 @@ const Contact = () => {
         setStatus("Error! Please try again later.");
       }
     },
-    [formData]
+    [formData] 
   );
 
   return (
-    <div>
-      <h1 className="bg-SecondaryBgLight dark:bg-SecondaryBgDark ps-16 py-7">Contact Me</h1>
-      <div className="grid grid-cols-2 p-28">
-        <div>
-          <h1 className="text-3xl">Reach Out</h1>
-          <h3 className="flex">
-            <MdEmail className="mt-3.5 me-2" />
-            <a href="mailto:kathiravandarshan@gmail.com">
-              kathiravandarshan@gmail.com
-            </a>
-          </h3>
-          <h3 className="flex -mt-2">
-            <FaGithub className="mt-3.5 me-2" />
-            <a href="https://github.com/darshankathiravan" target="_blank">
-              Github
-            </a>
-          </h3>
-          <h3 className="flex -mt-2">
-            <FaLinkedin className="mt-3.5 me-2" />
-            <a
-              href="https://www.linkedin.com/in/darshan-k-540921b5/"
-              target="_blank"
-            >
-              LinkedIn
-            </a>
-          </h3>
+    <section className="grid grid-cols-1 xl:grid-cols-2 bg-cardbglight text-PrimaryBgLight p-5 sm:w-4/5 rounded-lg mx-4 sm:mx-auto">
+      <aside className="flex flex-col items-start p-3">
+        <h2 className="mb-4">Let's Connect!</h2>
+        <p className="text-lg mb-6 dark:text-[#3ccf91]">
+          Feel free to reach out and share your experience with my portfolio!
+          I'd love to hear your feedback and thoughts on how you liked it.
+        </p>
+
+        {/* Contact Information */}
+        <div className="space-y-4 mb-8">
+          <div className="flex items-center">
+            <span className="mr-4">📧</span>
+            <span>kathiravandarshan@gmail.com</span>
+          </div>
+          <div className="flex items-center">
+            <span className="mr-4">📞</span>
+            <span>+91-6383107610</span>
+          </div>
+          <div className="flex items-center">
+            <span className="mr-4">📍</span>
+            <span>Chennai, India</span>
+          </div>
         </div>
 
-        {/* Pass props to ContactForm */}
-        <ContactForm
+        {/* Social Media Icons */}
+        <div className="flex space-x-6 text-2xl">
+          <a
+            href="https://www.linkedin.com/in/darshan-k-540921b5/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-gray-300"
+          >
+            <FaLinkedin />
+          </a>
+          <a
+            href="https://github.com/darshankathiravan"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-gray-300"
+          >
+            <FaGithub />
+          </a>
+          <a
+            href="https://www.instagram.com/darshann__k?utm_source=qr&igsh=enl6a3RtbG5oZXls"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-gray-300"
+          >
+            <FaInstagram />
+          </a>
+        </div>
+      </aside>
+      <div className="py-2 sm:py-3">
+        <ContactForm2
           formData={formData}
           handleChange={handleChange}
           handleSubmit={handleSubmit}
           status={status}
         />
+        {status && <p className="mt-4 text-center text-purple-700">{status}</p>}
       </div>
-    </div>
+    </section>
   );
 };
 

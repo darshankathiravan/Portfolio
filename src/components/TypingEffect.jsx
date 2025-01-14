@@ -50,7 +50,6 @@ const TypingEffect = ({ children, className, tag = 'div', typingSpeed = 100 }) =
   }, [isVisible, currentIndex, children, typingSpeed]);
 
   const Tag = tag;
-
   return (
     <Tag ref={containerRef} className={className}>
       {typedText}

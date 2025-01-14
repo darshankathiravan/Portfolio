@@ -1,73 +1,89 @@
 "use client"; // Ensures this page is rendered on the client side
 
 import TypingEffect from "@/components/TypingEffect";
+import Contact from "@/pages/Contact";
+import SlideIn from "@/components/animations/SlideIn";
+import Projects from "@/sections/Projects";
+import SocialSidebar from "@/components/SocialSidebar";
+import TechStackCard from "@/sections/TechStackCard";
+import ProfileCard from "@/sections/ProfileCard";
 
 const HomePage = () => {
   return (
-    <>
-      <main className="py-14 mx-auto px-10 md:px-12 xl:px-16 bg-SecondaryBgLight dark:bg-SecondaryBgDark text-textLight dark:text-textDark">
+    <div>
+      <main className="py-14 mx-auto px-5 md:px-16 xl:px-5" id="home">
         {/* Header Section */}
-        <h1 className="text-5xl text-primary dark:text-SecondaryTextDark">
-          Darshan
-        </h1>
+        <aside>
+          <SocialSidebar />
+        </aside>
+
+        <h1 className="text-primary dark:text-PrimaryTextDark my-4">Darshan</h1>
         <TypingEffect
-          tag="h2"
-          className="mt-2 h-8 text-2xl text-SecondaryTextLight dark:text-PrimaryTextDark"
+          tag="h3"
+          className="md:mt-6 text-SecondaryTextLight dark:text-[#3ccf91]"
         >
           Software Developer
         </TypingEffect>
 
         {/* About Section */}
-        <section className="mt-7 text-lg lg:w-4/5">
+        <section className="mt-4 md:mt-7 text-lg lg:w-4/5">
           <p className="text-PrimaryTextLight dark:text-SecondaryTextDark">
             "Hi, I’m Darshan, a passionate Frontend Developer dedicated to
             crafting beautiful, responsive, and user-friendly web applications.
             I specialize in modern frameworks like React ensuring pixel-perfect
             designs and seamless user experiences.
-            <br />
-            <br />
-            Highly motivated to build a career in software development and
-            deliver impactful results
-            <br />
-            <br />
-            I’m always open for collaborative work—let’s create something
-            amazing together! Check out my portfolio to see how I bring code to
-            life!"
-            <a
-              href="#portfolio"
-              className="text-accentLight hover:underline dark:text-accentDark"
-            >
-              {" "}
-              portfolio
-            </a>{" "}
-            and see how I bring ideas to life with code.
-          </p>
-        </section>
-
-        {/* Skills Summary Section */}
-        <section className="text-PrimaryTextLight dark:text-SecondaryTextDark">
-          <TypingEffect tag="h3" className="mt-10 h-8 font-bold">
-            Skills Summary
-          </TypingEffect>
-          <p>
-            <b>Languages:</b> JavaScript, Python, HTML, CSS, Java.
-          </p>
-          <p className="my-1">
-            <b>Frameworks:</b> React, Next.js, Tailwind CSS, Django, Bootstrap.
-          </p>
-          <p className="my-1">
-            <b>Tools:</b> Git/GitHub, Azure
           </p>
         </section>
       </main>
+      {/* TechStack Card */}
 
-      <footer className="my-10 text-center">
-        <h2
-          id="contact-heading"
-          className="text-3xl font-semibold text-primary dark:text-primaryDark"
-        >
+      <section className="mt-10">
+        <TechStackCard />
+      </section>
+
+      {/* Profile Card */}
+
+      <section>
+        <div className="text-center mt-32 mb-10 animate-pulse">
+          <div className="flex items-center justify-center gap-3">
+            <h2>About Me</h2>
+          </div>
+          {/* Bottom Line */}
+          <div className="w-1/2 mx-auto mt-4 border-2 dark:border-[#3ccf91]"></div>
+        </div>
+        <SlideIn>
+          <ProfileCard />
+        </SlideIn>
+      </section>
+
+      {/* Project Card */}
+
+      <section id="projects">
+        <div className="text-center mt-32 animate-pulse">
+          <div className="flex items-center justify-center gap-3">
+            <h2>My Work</h2>
+          </div>
+          {/* Bottom Line */}
+          <div className="w-1/2 mx-auto mt-4 border-2 dark:border-[#3ccf91]"></div>
+        </div>
+        <SlideIn>
+          <Projects />
+        </SlideIn>
+      </section>
+
+      {/* Contact Card */}
+
+      <section className="md:px-12 xl:px-16 mt-20" id="contact">
+        <SlideIn>
+          <Contact />
+        </SlideIn>
+      </section>
+
+      <footer className="mt-32 mb-10 mx-5 text-center">
+        <TypingEffect tag="h2" className="dark:text-primaryDark">
           Let’s Work Together!
-        </h2>
+        </TypingEffect>
+
         <p className="mt-4 text-lg">
           Interested in collaborating? Reach out to me via{" "}
           <a
@@ -87,7 +103,7 @@ const HomePage = () => {
           .
         </p>
       </footer>
-    </>
+    </div>
   );
 };
 

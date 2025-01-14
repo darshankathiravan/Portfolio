@@ -6,27 +6,15 @@
 /* styles/globals.css */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-}
-h1 {
-  font-size: 2.4rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-h2 {
-  font-size: 1.8rem;
-  line-height: 1.3;
-}
-
-h3 {
-  font-size: 1.4rem;
-  line-height: 1.4;
-  margin-top: 0.8rem;
-  margin-bottom: 0.4rem;
+html {
+  scroll-behavior: smooth;
 }
 
 a {
   font-size: 1.2rem;
-  font-family: "Source Sans 3", sans-serif;
   font-weight: 400;
   margin: 12px 0px;
 }
