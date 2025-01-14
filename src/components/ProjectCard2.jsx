@@ -30,7 +30,7 @@ const ProjectCard2 = ({ title, imgPath, techStack }) => {
         </div>
 
         <div className="text-white p-3 dark:bg-gray-900 max-w-[37.5rem] max-h-[rem16] ">
-          <h3 className="text-center text-PrimaryTextLight dark:text-PrimaryTextDark">
+          <h3 className="text-center dark:text-PrimaryTextDark">
             {title}
           </h3>
           <p className="text-center text-sm text-gray-400 mt-2">
