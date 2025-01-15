@@ -3,13 +3,13 @@ import React from "react";
 const ContactForm2 = ({ formData, handleChange, handleSubmit }) => {
   return (
     <div className="flex justify-center items-center">
-      <div className="w-full max-w-md p-8 bg-white rounded-lg shadow-lg">
+      <div className="w-full max-w-md p-8 bg-white rounded-lg shadow-lg text-black">
         <form onSubmit={handleSubmit} className="space-y-4">
           <input
             type="text"
             name="name"
             placeholder="Enter Your Name"
-            className="w-full p-3 bg-white"
+            className="w-full p-3 bg-white border-2"
             value={formData.name}
             onChange={handleChange}
             required
@@ -18,7 +18,7 @@ const ContactForm2 = ({ formData, handleChange, handleSubmit }) => {
             type="email"
             name="email"
             placeholder="Enter Your Email Address"
-            className="w-full p-3 bg-white"
+            className="w-full p-3 bg-white border-2"
             value={formData.email}
             onChange={handleChange}
             required
@@ -27,7 +27,7 @@ const ContactForm2 = ({ formData, handleChange, handleSubmit }) => {
             type="text"
             name="subject"
             placeholder="Enter Your Subject"
-            className="w-full p-3 bg-white"
+            className="w-full p-3 bg-white border-2"
             value={formData.subject}
             onChange={handleChange}
             required
@@ -35,7 +35,7 @@ const ContactForm2 = ({ formData, handleChange, handleSubmit }) => {
           <textarea
             name="message"
             placeholder="Enter Your Message"
-            className="w-full p-3 h-32 bg-white"
+            className="w-full p-3 h-32 bg-white border-2"
             value={formData.message}
             onChange={handleChange}
             required

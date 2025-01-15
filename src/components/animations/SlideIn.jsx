@@ -33,7 +33,6 @@ const SlideIn = (props) => {
       }
     };
   }, []);
-  console.log(containerRef);
   return (
     <div ref={containerRef}>
       <motion.div

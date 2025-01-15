@@ -19,7 +19,6 @@ const iconMap = {
 };
 
 const ProjectCard2 = ({ title, imgPath, techStack }) => {
-  console.log(techStack, "skodngoksdngo");
   return (
     <section>
       <div className="flex flex-col xl:flex-row items-center justify-center dark:bg-[#080808] mx-5 overflow-hidden bg-cardbglight rounded-xl">

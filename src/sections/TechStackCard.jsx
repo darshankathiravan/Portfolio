@@ -39,7 +39,7 @@ const TechStackCard = () => {
 
   return (
     <div className="bg-cardbglight text-white  py-10 rounded-lg m-5 md:m-16">
-      <TypingEffect tag="h2" className="my-5 font-bold text-center">
+      <TypingEffect tag="h2" className="my-5 font-bold text-center h-10">
         My TechStack
       </TypingEffect>
       <div className="flex flex-wrap justify-center">

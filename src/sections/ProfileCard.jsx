@@ -75,7 +75,7 @@ const ProfileCard = () => {
         >
           <a
             className="flex justify-center"
-            href="/assets/about/resume.pdf"
+            href="/assets/about/RESUME.pdf" 
             download="Darshan_K.pdf"
           >
             <CgNotes className="mt-1 mx-1" />

@@ -11,7 +11,7 @@ import ProfileCard from "@/sections/ProfileCard";
 const HomePage = () => {
   return (
     <div>
-      <main className="py-14 mx-auto px-5 md:px-16 xl:px-5" id="home">
+      <main className="py-5 sm:py-14 mx-auto px-5 md:px-16 xl:px-5" id="home">
         {/* Header Section */}
         <aside>
           <SocialSidebar />
@@ -20,7 +20,7 @@ const HomePage = () => {
         <h1 className="text-primary dark:text-PrimaryTextDark my-4">Darshan</h1>
         <TypingEffect
           tag="h3"
-          className="md:mt-6 text-SecondaryTextLight dark:text-[#3ccf91]"
+          className="md:mt-6 text-SecondaryTextLight dark:text-[#3ccf91] h-8"
         >
           Software Developer
         </TypingEffect>

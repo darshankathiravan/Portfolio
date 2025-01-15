@@ -25,22 +25,29 @@ const Navbar = () => {
   const handleScroll = (e, targetId) => {
     e.preventDefault();
     const targetElement = document.getElementById(targetId);
-
+  
     if (targetElement) {
-      targetElement.scrollIntoView({
+      const offset = -75; // Offset value in pixels (adjust as needed)
+      const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY + offset;
+  
+      window.scrollTo({
+        top: targetPosition,
         behavior: "smooth",
-        block: "start",
       });
     }
-    setIsSidebarOpen(false); // Close sidebar after scroll
+  
+    setIsSidebarOpen(false);
   };
-
+  
+  
   return (
-    <nav
-      // style={{ transitionDuration: "30ms" }}
-      className="p-6 flex justify-between items-center sticky top-0 z-50 border-0 text-lg bg-PrimaryBgLight dark:bg-PrimaryBgDark"
-    >
-      <span className="text-left animate-bounce font-semibold" onClick={(e)=>handleScroll(e, "home")}>@Darshan K</span>
+    <nav className="p-6 flex justify-between items-center sticky top-0 z-50 border-0 text-lg bg-PrimaryBgLight dark:bg-PrimaryBgDark">
+      <span
+        className="text-left animate-bounce font-semibold"
+        onClick={(e) => handleScroll(e, "home")}
+      >
+        @Darshan K
+      </span>
 
       {/* Sidebar Toggle Button */}
       <button
@@ -107,7 +114,6 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-
     </nav>
   );
 };
