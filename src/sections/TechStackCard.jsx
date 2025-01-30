@@ -35,6 +35,7 @@ const TechStackCard = () => {
     { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
     { name: "JavaScript", icon: <FaJsSquare className="text-yellow-400" /> },
     { name: "Django", icon: <FaNodeJs className="text-green-500" /> },
+    { name: "Postgres", icon: <SiPostgresql className="text-blue-500" /> },
   ];
 
   return (
@@ -42,7 +43,7 @@ const TechStackCard = () => {
       <TypingEffect tag="h2" className="my-5 font-bold text-center h-10">
         My TechStack
       </TypingEffect>
-      <div className="flex flex-wrap justify-center">
+      <div className="flex flex-wrap justify-center"> 
         {techStack.map((tech, index) => (
           <div
             key={index}

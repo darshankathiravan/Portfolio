@@ -1,5 +1,11 @@
 import { FaReact, FaGithub, FaHtml5, FaCss3Alt } from "react-icons/fa";
-import { SiTailwindcss, SiDjango } from "react-icons/si";
+import {
+  SiTailwindcss,
+  SiDjango,
+  SiBootstrap,
+  SiPostgresql,
+  SiNextdotjs,
+} from "react-icons/si";
 import { BiLinkExternal } from "react-icons/bi";
 import Image from "next/image";
 
@@ -9,16 +15,12 @@ const iconMap = {
   Django: <SiDjango size={24} className="text-green-800" />,
   HTML: <FaHtml5 size={24} className="text-orange-500" />,
   CSS: <FaCss3Alt size={24} className="text-blue-500" />,
-  "": (
-    <img
-      src="/assets/Nextjs.svg"
-      alt="Next.js"
-      className="h-6 w-14 hover:rotate-180 transition-transform duration-300"
-    />
-  ),
+  Bootstrap: <SiBootstrap size={24} className="text-blue-600" />,
+  "Postgres Sql": <SiPostgresql size={24} className="text-blue-600" />,
+  "Next.js": <SiNextdotjs size={24} className="text-white" />,
 };
 
-const ProjectCard2 = ({ title, imgPath, techStack }) => {
+const ProjectCard2 = ({ title, imgPath, techStack, link }) => {
   return (
     <section>
       <div className="flex flex-col xl:flex-row items-center justify-center dark:bg-[#080808] mx-5 overflow-hidden bg-cardbglight rounded-xl">
@@ -29,9 +31,7 @@ const ProjectCard2 = ({ title, imgPath, techStack }) => {
         </div>
 
         <div className="text-white p-3 dark:bg-gray-900 max-w-[37.5rem] max-h-[rem16] ">
-          <h3 className="text-center dark:text-PrimaryTextDark">
-            {title}
-          </h3>
+          <h3 className="text-center dark:text-PrimaryTextDark">{title}</h3>
           <p className="text-center text-sm text-gray-400 mt-2">
             May 2024 - Nov 2024
           </p>
@@ -54,16 +54,21 @@ const ProjectCard2 = ({ title, imgPath, techStack }) => {
           )}
 
           <div className="flex justify-center mt-2">
-            <a className="bg-yellow-500 text-black px-4 py-2 rounded-lg font-semibold flex items-center gap-2">
-              Client Project
-            </a>
-            {/* <a
-            href="#github-code"
-            className="bg-gray-800 text-white px-4 py-2 rounded-lg font-semibold flex items-center gap-2 hover:bg-gray-700 transform hover:scale-105 transition-transform duration-300"
-          >
-            <FaGithub className="h-5 w-5" />
-            GitHub Code
-          </a> */}
+            {!link ? (
+              <a className="bg-yellow-500 text-black px-4 py-2 rounded-lg font-semibold flex items-center gap-2">
+                Client's Project
+              </a>
+            ) : (
+              <a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gray-800 text-white px-4 py-2 rounded-lg font-semibold flex items-center gap-2 hover:bg-gray-700 transform hover:scale-105 transition-transform duration-300"
+              >
+                <BiLinkExternal className="h-5 w-5 bg-white text-black"/>
+                Live Site
+              </a>
+            )}
           </div>
         </div>
       </div>

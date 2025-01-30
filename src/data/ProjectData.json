@@ -5,7 +5,7 @@
     "year": 2024,
     "imgPath": "/assets/projects/poornatha.png",
     "description": "This project involves the development of an Admin Portal aimed at streamlining administrative tasks for Poornatha. The portal is designed to enhance efficiency by providing a user-friendly interface to manage various entities such as sessions, facilitators, colleges, and course types.",
-    "techstack": ["React JS", "HTML", "CSS", "Django", "Tailwind CSS"]
+    "techstack": ["HTML", "CSS", "Tailwind CSS", "React JS", "Django", "Postgres Sql"]
   },
   {
     "id": 1,
@@ -14,6 +14,16 @@
     "imgPath": "/assets/projects/activities.png",
     "description": "This project is an Interactive Activities Portal designed to create an engaging learning environment for kids through drag-and-drop games. The portal also features a Presenter Page where educators or presenters can design and customize activities based on specific learning objectives, making it highly adaptable to different age groups and subjects.",
     "screenshots": [{ "id": 0, "imgPath": "" }, {}],
-    "techstack": ["", "HTML", "CSS","Django", "Tailwind CSS"]
+    "techstack": [ "HTML", "CSS", "Tailwind CSS","Next.js","Django","Postgres Sql"]
+  },
+  {
+    "id": 2,
+    "title": "Ecommerce Website",
+    "year": 2024,
+    "imgPath": "/assets/projects/ecommerce.jpg",
+    "description": "This project is an Interactive Activities Portal designed to create an engaging learning environment for kids through drag-and-drop games. The portal also features a Presenter Page where educators or presenters can design and customize activities based on specific learning objectives, making it highly adaptable to different age groups and subjects.",
+    "screenshots": [{ "id": 0, "imgPath": "" }, {}],
+    "techstack": [ "HTML", "CSS", "Bootstrap","Django","Postgres Sql"],
+    "link" : "https://e-commerce-oxfl.onrender.com/store"
   }
 ]
