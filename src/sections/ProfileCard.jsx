@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
@@ -35,7 +37,7 @@ const ProfileCard = () => {
       icon: <FaGithub size={40} />,
       title: "Open Source Contributor Enthusiast",
       description:
-        "Interested in creating projects and occasionally contributing to open-source projects on GitHub.",
+        "Interested in creating projects and contributing to open-source projects on GitHub.",
     },
   ];
 
@@ -75,7 +77,7 @@ const ProfileCard = () => {
         >
           <a
             className="flex justify-center"
-            href="/assets/about/RESUME.pdf" 
+            href="/assets/about/RESUME.pdf"
             download="Darshan_K.pdf"
           >
             <CgNotes className="mt-1 mx-1" />
