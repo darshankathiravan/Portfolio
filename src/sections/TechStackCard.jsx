@@ -36,6 +36,7 @@ const TechStackCard = () => {
     { name: "JavaScript", icon: <FaJsSquare className="text-yellow-400" /> },
     { name: "Django", icon: <FaNodeJs className="text-green-500" /> },
     { name: "Postgres", icon: <SiPostgresql className="text-blue-500" /> },
+    { name: "Node.js", icon: <FaNodeJs  className="text-green-500" /> },
   ];
 
   return (
